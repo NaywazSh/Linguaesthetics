@@ -7,10 +7,23 @@ const learningData = {
     english: {
         vocabulary: {
             level1: [
+                { term: "the", definition: "Definite article", example: "The cat sat" },
+  { term: "be", definition: "Exist or occur", example: "To be or not" },
+  { term: "to", definition: "Preposition/direction", example: "Go to school" },
+  { term: "of", definition: "Possessive relation", example: "King of kings" },
+  { term: "and", definition: "Connector", example: "Salt and pepper" },
+  { term: "a", definition: "Indefinite article", example: "A dog barked" },
+  // ...truncated for brevity...
+  { term: "have", definition: "Possess/experience", example: "I have time" },
+  { term: "it", definition: "Neuter pronoun", example: "It is raining" },
+  { term: "for", definition: "Purpose/beneficiary", example: "Gift for you" },
+  { term: "not", definition: "Negation", example: "Do not enter" } 
+            ],
+            level2: [
                 { term: "Serendipity", definition: "Finding something good without looking for it", example: "It was pure serendipity." },
                 { term: "Petrichor", definition: "The smell of earth after rain", example: "I love the petrichor." }
-            ],
-            level2: [], level3: [], level4: []
+            ], 
+            level3: [], level4: []
         },
         video: {
             level1: [{ title: "Daily Conversations", duration: "5:00", thumbnail: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=500&q=60" }],
