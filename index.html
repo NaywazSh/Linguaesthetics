@@ -1,13 +1,65 @@
-<!-- REPLACEMENT FOR THE SELECT DROPDOWN -->
-<select id="language-select">
-    <option value="english">English 🇺🇸</option>
-    <option value="mandarin">Mandarin Chinese 🇨🇳</option>
-    <option value="spanish">Spanish 🇪🇸</option>
-    <option value="german">German 🇩🇪</option>
-    <option value="french">French 🇫🇷</option>
-    <option value="portuguese">Portuguese 🇵🇹</option>
-    <option value="arabic">Arabic 🇸🇦</option>
-    <option value="japanese">Japanese 🇯🇵</option>
-    <option value="russian">Russian 🇷🇺</option>
-    <option value="hindi">Hindi 🇮🇳</option>
-</select>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linguaesthetic | Learn Languages</title>
+    <!-- Google Fonts for Modern Typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <!-- Icon Set -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">Lingua<span class="highlight">esthetic</span>.</div>
+        <div class="user-profile">
+            <span id="user-level-display">Beginner</span>
+            <div class="avatar"><i class="fa-solid fa-user-astronaut"></i></div>
+        </div>
+    </nav>
+
+    <!-- Controls / Dashboard -->
+    <header class="dashboard-controls">
+        <div class="control-group">
+            <label>I want to learn:</label>
+            <!-- UPDATED DROPDOWN LIST -->
+            <select id="language-select">
+                <option value="english">English 🇺🇸</option>
+                <option value="mandarin">Mandarin Chinese 🇨🇳</option>
+                <option value="spanish">Spanish 🇪🇸</option>
+                <option value="german">German 🇩🇪</option>
+                <option value="french">French 🇫🇷</option>
+                <option value="portuguese">Portuguese 🇵🇹</option>
+                <option value="arabic">Arabic 🇸🇦</option>
+                <option value="japanese">Japanese 🇯🇵</option>
+                <option value="russian">Russian 🇷🇺</option>
+                <option value="hindi">Hindi 🇮🇳</option>
+            </select>
+        </div>
+
+        <div class="control-group">
+            <label>Focus Section:</label>
+            <div class="tab-container">
+                <button class="tab-btn active" data-type="vocabulary">Vocabulary</button>
+                <button class="tab-btn" data-type="video">Video & Listening</button>
+                <button class="tab-btn" data-type="grammar">Grammar & Reading</button>
+                <button class="tab-btn" data-type="quiz">Quiz Mode</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Dynamic Content Area -->
+    <main>
+        <div id="content-grid" class="grid-container">
+            <!-- Content injects here automatically via JS -->
+        </div>
+    </main>
+
+    <!-- Link to your JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
