@@ -1,9 +1,7 @@
 :root {
     --bg-dark: #0f0c29;
     --bg-gradient: linear-gradient(to right, #24243e, #302b63, #0f0c29);
-    --primary: #f12711;
     --primary-gradient: linear-gradient(to right, #f5af19, #f12711);
-    --secondary: #00c6ff;
     --secondary-gradient: linear-gradient(to right, #0072ff, #00c6ff);
     --glass: rgba(255, 255, 255, 0.05);
     --glass-border: rgba(255, 255, 255, 0.1);
@@ -11,11 +9,7 @@
     --font-main: 'Outfit', sans-serif;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
     font-family: var(--font-main);
@@ -38,35 +32,22 @@ body {
     z-index: 100;
 }
 
-.logo {
-    font-size: 1.8rem;
-    font-weight: 800;
-    letter-spacing: -1px;
-}
-
+.logo { font-size: 1.8rem; font-weight: 800; letter-spacing: -1px; }
 .highlight {
     background: var(--primary-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-.user-profile {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
+.user-profile { display: flex; align-items: center; gap: 15px; }
 .avatar {
-    width: 40px;
-    height: 40px;
+    width: 40px; height: 40px;
     background: var(--secondary-gradient);
     border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: flex; align-items: center; justify-content: center;
 }
 
-/* Dashboard Controls */
+/* Controls */
 .dashboard-controls {
     padding: 2rem 5%;
     display: flex;
@@ -86,17 +67,9 @@ select {
     cursor: pointer;
     outline: none;
 }
+option { background: #302b63; }
 
-option {
-    background: #302b63;
-}
-
-.tab-container {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-}
-
+.tab-container { display: flex; gap: 10px; flex-wrap: wrap; }
 .tab-btn {
     background: transparent;
     border: 1px solid var(--glass-border);
@@ -106,7 +79,6 @@ option {
     cursor: pointer;
     transition: 0.3s;
 }
-
 .tab-btn.active, .tab-btn:hover {
     background: var(--secondary-gradient);
     color: white;
@@ -114,16 +86,58 @@ option {
     box-shadow: 0 0 15px rgba(0, 198, 255, 0.4);
 }
 
-/* Grid Layout */
+/* Level Bar */
+.level-container {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    padding: 0 5%;
+    flex-wrap: wrap;
+}
+
+.level-btn {
+    background: var(--glass);
+    border: 1px solid var(--glass-border);
+    color: white;
+    padding: 10px 25px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    backdrop-filter: blur(5px);
+}
+
+.level-btn:hover {
+    background: rgba(255,255,255,0.1);
+    transform: translateY(-2px);
+}
+
+.level-btn.active {
+    background: var(--primary-gradient);
+    border-color: transparent;
+    box-shadow: 0 0 15px rgba(241, 39, 17, 0.4);
+}
+
+.level-btn.locked {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background: rgba(0,0,0,0.3);
+    border-color: transparent;
+}
+.level-btn.locked:hover { transform: none; }
+
+/* Grid & Cards */
 .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
-    padding: 2rem 5%;
-    padding-bottom: 5rem;
+    padding: 0 5% 5rem 5%;
 }
 
-/* Cards Design */
 .card {
     background: var(--glass);
     border: 1px solid var(--glass-border);
@@ -150,18 +164,10 @@ option {
     margin-bottom: 10px;
 }
 
-.card-content h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-}
+.card-content h3 { font-size: 1.5rem; margin-bottom: 10px; }
+.card-content p { color: rgba(255,255,255,0.8); font-size: 1.1rem; line-height: 1.5; }
 
-.card-content p {
-    color: rgba(255,255,255,0.8);
-    font-size: 1.1rem;
-    line-height: 1.5;
-}
-
-/* Specific Card Types */
+/* Inner Card Elements */
 .video-frame {
     width: 100%;
     aspect-ratio: 16/9;
@@ -174,12 +180,7 @@ option {
     overflow: hidden;
 }
 
-.play-btn {
-    font-size: 3rem;
-    color: white;
-    opacity: 0.8;
-    cursor: pointer;
-}
+.play-btn { font-size: 3rem; color: white; opacity: 0.8; }
 
 .action-btn {
     margin-top: 15px;
@@ -193,19 +194,9 @@ option {
     cursor: pointer;
     transition: 0.2s;
 }
+.action-btn:hover { filter: brightness(1.2); }
 
-.action-btn:hover {
-    filter: brightness(1.2);
-}
-
-/* Quiz Styles */
-.quiz-options {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 15px;
-}
-
+.quiz-options { display: flex; flex-direction: column; gap: 10px; margin-top: 15px; }
 .quiz-opt {
     background: rgba(255,255,255,0.1);
     padding: 10px;
@@ -213,67 +204,14 @@ option {
     cursor: pointer;
     text-align: center;
 }
+.quiz-opt:hover { background: rgba(255,255,255,0.2); }
 
-.quiz-opt:hover {
-    background: rgba(255,255,255,0.2);
+/* Animation Keyframes */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
-/* Responsive */
 @media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        gap: 1rem;
-    }
-    .dashboard-controls {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-}
-/* Level Bar Styles */
-.level-container {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-    margin-bottom: 2rem;
-    padding: 0 5%;
-    flex-wrap: wrap;
-}
-
-.level-btn {
-    background: var(--glass);
-    border: 1px solid var(--glass-border);
-    color: white;
-    padding: 10px 25px;
-    border-radius: 50px; /* Pill shape */
-    cursor: pointer;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    backdrop-filter: blur(5px);
-}
-
-.level-btn:hover {
-    background: rgba(255,255,255,0.1);
-    transform: translateY(-2px);
-}
-
-.level-btn.active {
-    background: var(--primary-gradient); /* Orange/Gold for active level */
-    border-color: transparent;
-    box-shadow: 0 0 15px rgba(241, 39, 17, 0.4);
-}
-
-/* Locked State */
-.level-btn.locked {
-    opacity: 0.5;
-    cursor: not-allowed;
-    background: rgba(0,0,0,0.3);
-    border-color: transparent;
-}
-
-.level-btn.locked:hover {
-    transform: none;
-    background: rgba(0,0,0,0.3);
+    .navbar, .dashboard-controls { flex-direction: column; align-items: flex-start; gap: 1rem; }
 }
