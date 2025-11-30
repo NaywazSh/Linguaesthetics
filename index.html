@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Linguaesthetic | Learn Languages</title>
-    <!-- Google Fonts for Modern Typography -->
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <!-- Icon Set -->
+    <!-- Font Awesome Icons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <!-- Link to your CSS file -->
+    <!-- Main CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -17,16 +17,15 @@
     <nav class="navbar">
         <div class="logo">Lingua<span class="highlight">esthetic</span>.</div>
         <div class="user-profile">
-            <span id="user-level-display">Beginner</span>
+            <span id="user-level-display">Level 1 Student</span>
             <div class="avatar"><i class="fa-solid fa-user-astronaut"></i></div>
         </div>
     </nav>
 
-    <!-- Controls / Dashboard -->
+    <!-- Dashboard Controls -->
     <header class="dashboard-controls">
         <div class="control-group">
             <label>I want to learn:</label>
-            <!-- UPDATED DROPDOWN LIST -->
             <select id="language-select">
                 <option value="english">English 🇺🇸</option>
                 <option value="mandarin">Mandarin Chinese 🇨🇳</option>
@@ -52,19 +51,20 @@
         </div>
     </header>
 
-<!-- Dynamic Content Area -->
+    <!-- Dynamic Content Area -->
     <main>
-        <!-- NEW LEVEL SELECTION BAR -->
+        <!-- Level Selection Bar -->
         <div id="level-bar" class="level-container">
-            <!-- Buttons injected via JS -->
+            <!-- Level Buttons Injected via JS -->
         </div>
 
+        <!-- Cards Grid -->
         <div id="content-grid" class="grid-container">
-            <!-- Content injects here automatically via JS -->
+            <!-- Content Injected via JS -->
         </div>
     </main>
 
-    <!-- Link to your JavaScript file -->
+    <!-- Main Logic -->
     <script src="script.js"></script>
 </body>
 </html>
