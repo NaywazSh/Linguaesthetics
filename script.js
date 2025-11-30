@@ -1,56 +1,106 @@
 /* 
     DATA BACKBONE 
-    Add content here. The site renders it automatically.
+    The keys here match the 'value' attributes in your HTML dropdown.
 */
 const learningData = {
-    spanish: {
+    english: {
         vocabulary: [
-            { term: "El Gato", definition: "The Cat", example: "El gato duerme." },
-            { term: "La Biblioteca", definition: "The Library", example: "Estudio en la biblioteca." },
-            { term: "Caminar", definition: "To Walk", example: "Me gusta caminar." },
-            { term: "Desayuno", definition: "Breakfast", example: "Como huevos para el desayuno." }
+            { term: "Serendipity", definition: "Finding something good without looking for it", example: "It was pure serendipity that we met." },
+            { term: "Petrichor", definition: "The smell of earth after rain", example: "I love the petrichor in the morning." }
         ],
         video: [
-            { title: "Basic Greetings", duration: "2:30", thumbnail: "https://images.unsplash.com/photo-1551096053-159e1998394a?auto=format&fit=crop&w=500&q=60" },
-            { title: "Ordering Food", duration: "5:45", thumbnail: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=500&q=60" }
+            { title: "English Conversation", duration: "5:00", thumbnail: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=500&q=60" }
         ],
-        grammar: [
-            { rule: "Gender Nouns", desc: "Words ending in -o are usually masculine, -a are feminine." },
-            { rule: "Verb Ser vs Estar", desc: "Ser is permanent, Estar is temporary." }
+        grammar: [{ rule: "Subject-Verb Agreement", desc: "He walks (singular) vs They walk (plural)." }],
+        quiz: [{ question: "Past tense of 'Run'?", options: ["Runned", "Ran", "Running"], answer: 1 }]
+    },
+    mandarin: {
+        vocabulary: [
+            { term: "Nǐ hǎo (你好)", definition: "Hello", example: "Nǐ hǎo, ma?" },
+            { term: "Xièxiè (谢谢)", definition: "Thank You", example: "Xièxiè nǐ de bāngzhù." }
         ],
-        quiz: [
-            { question: "How do you say 'Good Morning'?", options: ["Hola", "Buenos Días", "Adiós"], answer: 1 },
-            { question: "Select the verb 'To Eat'", options: ["Comer", "Bewer", "Dormir"], answer: 0 }
-        ]
+        video: [],
+        grammar: [{ rule: "The 4 Tones", desc: "Mandarin relies on tones to distinguish meaning." }],
+        quiz: [{ question: "What is 'Thank You'?", options: ["Ni Hao", "Xiexie", "Zaijian"], answer: 1 }]
+    },
+    spanish: {
+        vocabulary: [
+            { term: "El Gato", definition: "The Cat", example: "El gato duerme en el sofá." },
+            { term: "La Biblioteca", definition: "The Library", example: "Estudio en la biblioteca." }
+        ],
+        video: [
+             { title: "Spanish Basics", duration: "4:20", thumbnail: "https://images.unsplash.com/photo-1564564244660-5d73c057f2d2?auto=format&fit=crop&w=500&q=60" }
+        ],
+        grammar: [{ rule: "Gender Nouns", desc: "Words ending in -o are usually masculine, -a are feminine." }],
+        quiz: [{ question: "Translate 'Red'", options: ["Azul", "Rojo", "Verde"], answer: 1 }]
+    },
+    german: {
+        vocabulary: [
+            { term: "Der Hund", definition: "The Dog", example: "Der Hund bellt." },
+            { term: "Guten Morgen", definition: "Good Morning", example: "Guten Morgen, wie geht's?" }
+        ],
+        video: [],
+        grammar: [{ rule: "Capitalization", desc: "All nouns in German are capitalized." }],
+        quiz: [{ question: "Means 'Yes'", options: ["Nein", "Ja", "Doch"], answer: 1 }]
     },
     french: {
         vocabulary: [
-            { term: "Bonjour", definition: "Hello", example: "Bonjour tout le monde." },
-            { term: "Merci", definition: "Thank you", example: "Merci beaucoup." }
-        ],
-        video: [
-            { title: "French Pronunciation", duration: "10:00", thumbnail: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=500&q=60" }
-        ],
-        grammar: [
-            { rule: "Liaison", desc: "Linking the final consonant of a word with the initial vowel of the next." }
-        ],
-        quiz: [
-            { question: "Translate 'Red'", options: ["Bleu", "Rouge", "Vert"], answer: 1 }
-        ]
-    },
-    // You can easily add "japanese": { ... } here later
-    japanese: {
-        vocabulary: [
-             { term: "Konnichiwa", definition: "Hello", example: "Konnichiwa genki desu ka?" }
+            { term: "L'Amour", definition: "Love", example: "C'est l'amour de ma vie." },
+            { term: "Pomme", definition: "Apple", example: "Je mange une pomme." }
         ],
         video: [],
-        grammar: [],
-        quiz: []
+        grammar: [{ rule: "Liaison", desc: "Linking final consonants to initial vowels." }],
+        quiz: [{ question: "Translate 'Cat'", options: ["Chien", "Chat", "Cheval"], answer: 1 }]
+    },
+    portuguese: {
+        vocabulary: [
+            { term: "Obrigado", definition: "Thank you (male)", example: "Obrigado pelo presente." },
+            { term: "A Praia", definition: "The Beach", example: "Eu amo a praia." }
+        ],
+        video: [],
+        grammar: [{ rule: "Ser vs Estar", desc: "Similar to Spanish, denoting permanent vs temporary states." }],
+        quiz: [{ question: "Good Night", options: ["Bom dia", "Boa noite", "Tarde"], answer: 1 }]
+    },
+    arabic: {
+        vocabulary: [
+            { term: "Marhaba (مرحبا)", definition: "Hello", example: "Marhaba, kayfa halak?" },
+            { term: "Shukran (شكرا)", definition: "Thank you", example: "Shukran jazeelan." }
+        ],
+        video: [],
+        grammar: [{ rule: "Right to Left", desc: "Arabic script is written from right to left." }],
+        quiz: [{ question: "Translate 'Peace'", options: ["Salam", "Harb", "Kitab"], answer: 0 }]
+    },
+    japanese: {
+        vocabulary: [
+            { term: "Konnichiwa (こんにちは)", definition: "Hello/Good Afternoon", example: "Konnichiwa genki desu ka?" },
+            { term: "Arigatou (ありがとう)", definition: "Thank you", example: "Arigatou gozaimasu." }
+        ],
+        video: [],
+        grammar: [{ rule: "SOV Structure", desc: "Subject - Object - Verb word order." }],
+        quiz: [{ question: "Translate 'Water'", options: ["Mizu", "Hi", "Tsuchi"], answer: 0 }]
+    },
+    russian: {
+        vocabulary: [
+            { term: "Privet (Привет)", definition: "Hi (Informal)", example: "Privet, kak dela?" },
+            { term: "Spasibo (Спасибо)", definition: "Thank you", example: "Bolshoe spasibo." }
+        ],
+        video: [],
+        grammar: [{ rule: "Cyrillic Alphabet", desc: "Russian uses the Cyrillic script." }],
+        quiz: [{ question: "Translate 'No'", options: ["Da", "Net", "Mozhet"], answer: 1 }]
+    },
+    hindi: {
+        vocabulary: [
+            { term: "Namaste (नमस्ते)", definition: "Hello/Greetings", example: "Namaste, aap kaise hain?" },
+            { term: "Dhanyavaad (धन्यवाद)", definition: "Thank you", example: "Aapka dhanyavaad." }
+        ],
+        video: [],
+        grammar: [{ rule: "Gendered Verbs", desc: "Verb endings often change based on gender." }],
+        quiz: [{ question: "Translate 'Tea'", options: ["Paani", "Chai", "Doodh"], answer: 1 }]
     }
 };
 
 /* STATE MANAGEMENT */
-let currentLanguage = "spanish";
+let currentLanguage = "english"; // Default
 let currentSection = "vocabulary";
 
 /* DOM ELEMENTS */
@@ -60,17 +110,23 @@ const tabButtons = document.querySelectorAll('.tab-btn');
 
 /* INITIALIZATION */
 document.addEventListener('DOMContentLoaded', () => {
+    // Sync Select with Default
+    langSelect.value = currentLanguage; 
     renderContent();
 });
 
 /* EVENT LISTENERS */
 langSelect.addEventListener('change', (e) => {
     currentLanguage = e.target.value;
-    // Animation reset effect
+    
+    // Smooth Transition Effect
     contentGrid.style.opacity = '0';
+    contentGrid.style.transform = 'translateY(10px)';
+    
     setTimeout(() => {
         renderContent();
         contentGrid.style.opacity = '1';
+        contentGrid.style.transform = 'translateY(0)';
     }, 300);
 });
 
@@ -92,22 +148,28 @@ function renderContent() {
     
     // Safety check if language data exists
     if(!learningData[currentLanguage] || !learningData[currentLanguage][currentSection]) {
-        contentGrid.innerHTML = `<h3 style="grid-column: 1/-1; text-align:center;">Content coming soon for this section!</h3>`;
+        contentGrid.innerHTML = `<h3 style="grid-column: 1/-1; text-align:center; color: #fff;">Content coming soon for ${currentLanguage}!</h3>`;
         return;
     }
 
     const data = learningData[currentLanguage][currentSection];
 
+    if(data.length === 0) {
+        contentGrid.innerHTML = `<h3 style="grid-column: 1/-1; text-align:center; opacity: 0.7;">No content added yet for this section.</h3>`;
+        return;
+    }
+
     data.forEach((item, index) => {
         const card = document.createElement('div');
         card.className = 'card';
+        // Staggered animation
         card.style.animation = `fadeIn 0.5s ease forwards ${index * 0.1}s`;
-        card.style.opacity = '0'; // For animation
+        card.style.opacity = '0';
 
         // GENERATE CARD BASED ON TYPE
         if (currentSection === 'vocabulary') {
             card.innerHTML = `
-                <div class="card-tag">Vocabulary Card</div>
+                <div class="card-tag">Vocabulary</div>
                 <div class="card-content">
                     <h3>${item.term}</h3>
                     <p style="color: var(--secondary)">${item.definition}</p>
@@ -162,14 +224,28 @@ function renderContent() {
 
 /* HELPER FUNCTIONS */
 
-// Text to Speech for Vocabulary
+// Text to Speech with Accent Selection
 function speakText(text) {
     const utterance = new SpeechSynthesisUtterance(text);
-    // Try to set language accent based on selection
-    if(currentLanguage === 'spanish') utterance.lang = 'es-ES';
-    if(currentLanguage === 'french') utterance.lang = 'fr-FR';
-    if(currentLanguage === 'japanese') utterance.lang = 'ja-JP';
     
+    // Logic to select accent based on currentLanguage
+    const locales = {
+        english: 'en-US',
+        mandarin: 'zh-CN',
+        spanish: 'es-ES',
+        german: 'de-DE',
+        french: 'fr-FR',
+        portuguese: 'pt-PT', // or pt-BR
+        arabic: 'ar-SA',
+        japanese: 'ja-JP',
+        russian: 'ru-RU',
+        hindi: 'hi-IN'
+    };
+
+    if(locales[currentLanguage]) {
+        utterance.lang = locales[currentLanguage];
+    }
+
     window.speechSynthesis.speak(utterance);
 }
 
@@ -177,9 +253,11 @@ function speakText(text) {
 function checkAnswer(element, isCorrect) {
     if(isCorrect) {
         element.style.background = '#2ecc71'; // Green
+        element.style.color = '#fff';
         element.innerHTML += ' <i class="fa-solid fa-check"></i>';
     } else {
         element.style.background = '#e74c3c'; // Red
+        element.style.color = '#fff';
         element.innerHTML += ' <i class="fa-solid fa-xmark"></i>';
     }
     // Disable further clicks in this card
